@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 // Compile all SASS to CSS
 gulp.task('csass', function () {
     gulp.src('./sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({precision:8}).on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
 
