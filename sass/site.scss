@@ -1,1 +1,179 @@
-//@import './bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-custom';
+/*
+$brand-primary:         darken(gold, 6.5%);
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #1c1c1c;
+//** Global text color on `<body>`.
+$text-color:            white;
+
+//** Global textual link color.
+$link-color:            $gray-lighter;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: underline;
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+// TODO: change load directory for live.
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+//** File name for all font files.
+//$icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
+//$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+*/
+@import 'bootstrap-variables-custom';
+// TODO: comment-out bootstrap-variables from bootstrap-custom
+@import './bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-custom';
+
+// Landing
+.landing-container {
+    position: relative;
+    height: 600px;
+    width:100%;
+    background-image: url(../test.svg), url(http://dummyimage.com/700x400/7300ff/000000);
+    background-repeat: no-repeat;
+    background-size: 100% 600px, 50% 100%;
+    background-position: 0%, 100%;
+    //min-height: 100px;
+    margin-bottom: 100px;
+    //line-height: 90%;
+    
+    h1 {
+        //line-height: 50px;
+        font-size: 50px;
+        padding-top: 200px;
+        text-indent: 75px;
+    }
+    h2 {
+        color: $gray;
+        text-indent: 75px;
+    }
+    /*
+    TODO: Use variables and all SASS goodies for
+    positioning, and sizing, of the icons and phonenumber.
+    */
+    .landing-icon-email {
+        position: absolute;
+        right: 0%;
+        bottom: 70px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    
+    .landing-icon-skype {
+        position: absolute;
+        right: 49px;
+        bottom: 70px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .landing-icon-facebook {
+        position: absolute;
+        right: 80px;
+        bottom: 70px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .landing-phonenumber {
+        padding-right: 50px;
+        padding-left: 50px;
+        position: absolute;
+        background-image: url(../test.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        right: 0%;
+        bottom: 50px;
+    }
+    /*
+    .landing-contact-container {
+        $skew-margin: 10%;
+        position: absolute;
+        right: 0%;
+        //width: 100%;
+        
+        .landing-contact-icon {
+            display: inline-block;
+            position: relative;
+            background-color: $body-bg;
+            padding-right: $skew-margin;
+        }
+        
+        .landing-contact-icon:before {
+            content: "";
+            //box-sizing: content-box;
+            //display: inline-block;
+            position: absolute;
+            background-color: green; //$body-bg;
+            clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+            width: 1%;
+            height: 100%;
+            //right: 1%;
+        }
+        
+        .landing-contact-icon:after {
+            content: "";
+            //box-sizing: content-box;
+            //display: inline-block;
+            position: absolute;
+            background-color: green; //$body-bg;
+            clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+            width: 1%;
+            height: 100%;
+        }
+    }
+    */
+}
+
+// Aside images
+figure {
+    figcaption {
+        z-index: 1;
+        position: absolute;
+        padding: 3% 20%;
+        background: url(../test.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+// Breadcrumb navbar
+.breadcrumb-navbar {
+    .row {
+        span.arrow-link {
+            color: $brand-primary;
+        }
+        
+        nav {
+            ul.nav {
+                li {
+                    text-align: center;
+                }
+                
+                li.current {
+                    a {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}

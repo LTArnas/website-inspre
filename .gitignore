@@ -1,2 +1,14 @@
 .vscode/
+
+# We --DO NOT-- add build tools to source control.
+# ...tools used should only be documented,
+# but -- DO -- add project-specific files.
+# (i.e. gulpfile.js, bower.json, package.json)
+# This way, user-specific setup is allowed,
+# but easy/common setup is also available.
 node_modules/
+
+# We -- DO -- add dependencies to source control.
+# https://addyosmani.com/blog/checking-in-front-end-dependencies/
+# Namely, we try to NOT depend on specific tools to work.
+# bower_components/

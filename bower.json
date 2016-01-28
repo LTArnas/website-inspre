@@ -1,0 +1,27 @@
+{
+  "name": "inspre",
+  "description": "inspre website",
+  "main": "inspre.js",
+  "authors": [
+    "Arnoldas Rudzevicius <arnoldas.rudz@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "inspre"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
+    "susy": "~2.2.11",
+    "compass-breakpoint": "breakpoint-sass#~2.6.1"
+  }
+}

@@ -13,16 +13,21 @@
         <title>Inspre</title>
         
         <!-- [Bootstrap] Latest compiled and minified CSS -->
+        <!-- We use bootstrap internally, so no need for original
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        -->
         <!-- Our CSS -->
-        <link rel="stylesheet" type="text/css" href="css/site.css">
+        <link rel="stylesheet" href="css/site.css">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="h1 text-danger bg-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <!-- TODO: Remember to stylize <noscript> and the outdated browser notification. -->
         <noscript class="h1 text-warning bg-warning">This website requires JavaScript to function properly.</noscript>
+        
         <!-- TODO: Add home fragment link ...everywhere. -->
+        
         <!--
             Navbar
             -->
@@ -42,47 +47,29 @@
                 <div class="collapse navbar-collapse" id="navbar-links">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#apiemus">APIE MUS <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
+                        <li class="navbar-text">/</li>
+                        <li><a href="#paslaugos">Paslaugos</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
         
         <!--
-            Landing
+            Hero
             -->
-        <section class="container-fluid">
-            <!-- INSPRE text and subtext -->
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="text-center">IN/SPRE <small>inzineriniai sprendimai</small></h1>
-                </div>
+        <div class="hero-container">
+            <h1>IN/SPRE</h1>
+            <h2>inzineriniai sprendimai</h2>
+            <!-- Contact links and tel. number -->
+            <!-- TODO: Consider wrapping these into a container for, maybe, better html structure. -->
+            <a class="hero-icon-email"><img src="./test.svg"></a>
+            <a class="hero-icon-skype"><img src="./test.svg"></a>
+            <a class="hero-icon-facebook"><img src="./test.svg"></a>
+            <div class="hero-phonenumber">
+                <!-- TODO: Replace with better markup. Make clickable/phonable for phones. Make searchable for SOE. -->
+                <p>+370 627 63 191</p>
             </div>
-            <!-- Contact buttons and tel. number -->
-            <div class="row">
-                <div class="col-md-1 col-md-offset-11">
-                    <!-- Email, skype, facebook buttons -->
-                    <div class="row">
-                        <div class="col-md-4">
-                            <button><span class="glyphicon glyphicon-envelope"></span></button>
-                        </div>
-                        <div class="col-md-4">
-                            <button><span class="glyphicon glyphicon-envelope"></span></button>
-                        </div>
-                        <div class="col-md-4">
-                            <button><span class="glyphicon glyphicon-envelope"></span></button>
-                        </div>
-                    </div>
-                    <!-- telephone number -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- TODO: Replace with better markup. Make clickable/phonable for phones. Make searchable for SOE. -->
-                            <p>+370 627 63 191</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
         
         <!--
             Apie mus
@@ -90,21 +77,29 @@
         <section class="container">
             <div class="row">
                 <article class="col-md-6">
+                    <!-- TODO: use <header> ...for the heading. -->
                     <h1><a name="apiemus"></a>APIE IMONE</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fuga totam accusamus aliquam culpa voluptatem, doloribus impedit numquam? Repellat repudiandae voluptatibus aliquid, sint recusandae inventore animi modi temporibus error iure?</p>
                 </article>
-                <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
+                <figure class="col-md-6">
+                    <figcaption>Apie mus</figcaption>
+                    <img src="http://dummyimage.com/600x400/7300ff/000000">
+                </figure>
             </div>
         </section>
         
-        <!-- breadcrumb navbar -->
-        <div class="container-fluid">
-            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <!-- 
+            breadcrumb navbar 
+            -->
+        <!-- TODO: hide on mobile -->
+        <div class="breadcrumb-navbar container">
+            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="arrow-link glyphicon glyphicon-chevron-up"></span></a></div>
             <div class="row">
                 <nav class="col-md-12">
                     <ul class="nav nav-pills nav-justified">
-                        <li><a href="">apie mus</a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="#apiemus">apie mus</a></li>
+                        <li>/</li>
+                        <li class="current"><a href="#paslaugos">paslaugos<span class="sr-only">(current)</span></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
@@ -112,39 +107,32 @@
                     </ul>
                 </nav>
             </div>
-            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="glyphicon glyphicon-chevron-down"></span></a></div>
+            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="arrow-link glyphicon glyphicon-chevron-down"></span></a></div>
         </div>
         
         <!--
             Paslaugos
             -->
+        <!-- TODO: use <header> for article headings. -->
+        <!-- TODO: fix <img> to use <figure> -->
+        <!-- TODO: fix stacking order of articles with the image for mobile. -->
         <section class="container">
             <!-- title -->
-            <div class="row">
+            <header class="row">
                 <h1 class="col-md-1"><a name="paslaugos"></a>Paslaugos</h1>
-            </div>
-            <!-- Content (1 row=1 content) -->
+            </header>
+            <!-- 
+                Content (1 row=1 content) 
+                -->
+            <!-- paslaugos -->
             <section class="row">
                 <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
                 <article class="col-md-6">
-                    <h1><a name="apiemus"></a>APIE IMONE</h1>
+                    <h1><a name="paslaugos"></a>APIE IMONE</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fuga totam accusamus aliquam culpa voluptatem, doloribus impedit numquam? Repellat repudiandae voluptatibus aliquid, sint recusandae inventore animi modi temporibus error iure?</p>
                 </article>
             </section>
-            <section class="row">
-                <article class="col-md-6">
-                    <h1><a name="apiemus"></a>APIE IMONE</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fuga totam accusamus aliquam culpa voluptatem, doloribus impedit numquam? Repellat repudiandae voluptatibus aliquid, sint recusandae inventore animi modi temporibus error iure?</p>
-                </article>
-                <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
-            </section>
-            <section class="row">
-                <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
-                <article class="col-md-6">
-                    <h1><a name="apiemus"></a>APIE IMONE</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fuga totam accusamus aliquam culpa voluptatem, doloribus impedit numquam? Repellat repudiandae voluptatibus aliquid, sint recusandae inventore animi modi temporibus error iure?</p>
-                </article>
-            </section>
+            <!-- [content] -->
             <section class="row">
                 <article class="col-md-6">
                     <h1><a name="apiemus"></a>APIE IMONE</h1>
@@ -152,6 +140,23 @@
                 </article>
                 <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
             </section>
+            <!-- [content] -->
+            <section class="row">
+                <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
+                <article class="col-md-6">
+                    <h1><a name="apiemus"></a>APIE IMONE</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fuga totam accusamus aliquam culpa voluptatem, doloribus impedit numquam? Repellat repudiandae voluptatibus aliquid, sint recusandae inventore animi modi temporibus error iure?</p>
+                </article>
+            </section>
+            <!-- [content] -->
+            <section class="row">
+                <article class="col-md-6">
+                    <h1><a name="apiemus"></a>APIE IMONE</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fuga totam accusamus aliquam culpa voluptatem, doloribus impedit numquam? Repellat repudiandae voluptatibus aliquid, sint recusandae inventore animi modi temporibus error iure?</p>
+                </article>
+                <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
+            </section>
+            <!-- [content] -->
             <section class="row">
                 <img class="col-md-6" src="http://dummyimage.com/600x400/7300ff/000000">
                 <article class="col-md-6">
@@ -161,14 +166,18 @@
             </section>
         </section>
         
-        <!-- breadcrumb navbar -->
-        <div class="container-fluid">
-            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <!-- 
+            breadcrumb navbar 
+            -->
+        <!-- TODO: hide on mobile -->
+        <div class="breadcrumb-navbar container">
+            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="arrow-link glyphicon glyphicon-chevron-up"></span></a></div>
             <div class="row">
                 <nav class="col-md-12">
                     <ul class="nav nav-pills nav-justified">
-                        <li><a href="">apie mus</a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="#apiemus">apie mus</a></li>
+                        <li>/</li>
+                        <li class="current"><a href="#paslaugos">paslaugos<span class="sr-only">(current)</span></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
@@ -176,7 +185,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="glyphicon glyphicon-chevron-down"></span></a></div>
+            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="arrow-link glyphicon glyphicon-chevron-down"></span></a></div>
         </div>
         
         <!--
@@ -193,14 +202,18 @@
             </div>
         </section>
         
-        <!-- breadcrumb navbar -->
-        <div class="container-fluid">
-            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <!-- 
+            breadcrumb navbar 
+            -->
+        <!-- TODO: hide on mobile -->
+        <div class="breadcrumb-navbar container">
+            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="arrow-link glyphicon glyphicon-chevron-up"></span></a></div>
             <div class="row">
                 <nav class="col-md-12">
                     <ul class="nav nav-pills nav-justified">
-                        <li><a href="">apie mus</a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="#apiemus">apie mus</a></li>
+                        <li>/</li>
+                        <li class="current"><a href="#paslaugos">paslaugos<span class="sr-only">(current)</span></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
@@ -208,8 +221,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="glyphicon glyphicon-chevron-down"></span></a></div>
+            <div class="row"><a class="col-md-2 col-md-offset-5 text-center" name=""><span class="arrow-link glyphicon glyphicon-chevron-down"></span></a></div>
         </div>
+        
         <!-- TODO: Fixup form, for the details; including attributes. -->
         <!--
             Kontaktai
@@ -315,7 +329,9 @@
             </div>
         </footer>
         
-        <!-- SCRIPTS -->
+        <!-- 
+            SCRIPTS 
+            -->
         
         <!-- [jQuery] -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

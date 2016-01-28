@@ -18,7 +18,6 @@ gulp.task('postcss', function () {
     var processors = [
         autoprefixer({ browsers: ['last 2 version'] })
     ];
-    console.log('wtf');
     gulp.src('./compiledcss/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./css'));
