@@ -39,7 +39,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import './bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-custom';
 
 // Landing
-.landing-container {
+.hero-container {
     position: relative;
     height: 600px;
     width:100%;
@@ -65,7 +65,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
     TODO: Use variables and all SASS goodies for
     positioning, and sizing, of the icons and phonenumber.
     */
-    .landing-icon-email {
+    .hero-icon-email {
         position: absolute;
         right: 0%;
         bottom: 70px;
@@ -75,7 +75,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
         }
     }
     
-    .landing-icon-skype {
+    .hero-icon-skype {
         position: absolute;
         right: 49px;
         bottom: 70px;
@@ -84,7 +84,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
             height: 50px;
         }
     }
-    .landing-icon-facebook {
+    .hero-icon-facebook {
         position: absolute;
         right: 80px;
         bottom: 70px;
@@ -93,7 +93,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
             height: 50px;
         }
     }
-    .landing-phonenumber {
+    .hero-phonenumber {
         padding-right: 50px;
         padding-left: 50px;
         position: absolute;

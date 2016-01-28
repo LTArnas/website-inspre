@@ -5853,7 +5853,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.landing-container {
+.hero-container {
   position: relative;
   height: 600px;
   width: 100%;
@@ -5904,35 +5904,35 @@ button.close {
         }
     }
     */ }
-  .landing-container h1 {
+  .hero-container h1 {
     font-size: 50px;
     padding-top: 200px;
     text-indent: 75px; }
-  .landing-container h2 {
+  .hero-container h2 {
     color: #555555;
     text-indent: 75px; }
-  .landing-container .landing-icon-email {
+  .hero-container .hero-icon-email {
     position: absolute;
     right: 0%;
     bottom: 70px; }
-    .landing-container .landing-icon-email img {
+    .hero-container .hero-icon-email img {
       width: 50px;
       height: 50px; }
-  .landing-container .landing-icon-skype {
+  .hero-container .hero-icon-skype {
     position: absolute;
     right: 49px;
     bottom: 70px; }
-    .landing-container .landing-icon-skype img {
+    .hero-container .hero-icon-skype img {
       width: 50px;
       height: 50px; }
-  .landing-container .landing-icon-facebook {
+  .hero-container .hero-icon-facebook {
     position: absolute;
     right: 80px;
     bottom: 70px; }
-    .landing-container .landing-icon-facebook img {
+    .hero-container .hero-icon-facebook img {
       width: 50px;
       height: 50px; }
-  .landing-container .landing-phonenumber {
+  .hero-container .hero-phonenumber {
     padding-right: 50px;
     padding-left: 50px;
     position: absolute;
